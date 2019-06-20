@@ -15,6 +15,6 @@ defmodule RestuAPIWeb.FallbackController do
   def call(conn, {:error, :not_found}) do
     conn
     |> put_status(:not_found)
-    |> render(RestuAPIWeb.ErrorView, :"404")
+    |> render(conn, "404.json", error: :error)
   end
 end

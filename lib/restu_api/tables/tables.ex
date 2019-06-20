@@ -7,7 +7,7 @@ defmodule RestuAPI.Tables do
 
   alias RestuAPI.Repo
   alias RestuAPI.Reservations.Reservation
-  alias RestuAPI.Resturants
+  alias RestuAPI.Restaurants
   alias RestuAPI.Tables.Table
 
   @doc """
@@ -34,20 +34,20 @@ defmodule RestuAPI.Tables do
   end
 
   @doc """
-    Retrieve available tables for a resturant at a give period of time
+    Retrieve available tables for a restaurant at a give period of time
   """
   def open_tables(name, from, to) do
-    resturant = Resturants.resturant_by_name(name)
-    if !resturant.is_active do
+    restaurant = Restaurants.restaurant_by_name(name)
+    if !restaurant.is_active do
       nil
     else
       Repo.all from table in Table,
         left_join: reservation in Reservation,
         on: table.id == reservation.table_id,
-        where: table.resturant_id == ^resturant.id and
-          (reservation.reserve_end_time < ^from or
-          reservation.reserve_start_time > ^to or
-          is_nil(reservation.reserve_start_time)),
+        where: table.restaurant_id == ^restaurant.id and
+          (reservation.order_end_time < ^from or
+          reservation.order_start_time > ^to or
+          is_nil(reservation.order_start_time)),
         select: table
     end
   end

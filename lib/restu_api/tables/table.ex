@@ -1,7 +1,7 @@
 defmodule RestuAPI.Tables.Table do
   use Ecto.Schema
   import Ecto.Changeset
-  alias RestuAPI.Resturants.Resturant
+  alias RestuAPI.Restaurants.Restaurant
   alias RestuAPI.Reservations.Reservation
 
 
@@ -11,7 +11,7 @@ defmodule RestuAPI.Tables.Table do
     field :min_seats, :integer
     field :description, :string
 
-    belongs_to :resturants, Resturant, foreign_key: :resturant_id
+    belongs_to :restaurants, Restaurant, foreign_key: :restaurant_id
     has_many :reservations, Reservation
 
     timestamps()
@@ -20,7 +20,7 @@ defmodule RestuAPI.Tables.Table do
   @doc false
   def changeset(table, attrs) do
     table
-    |> cast(attrs, [:resturant_id, :assigned_number, :max_seats, :min_seats, :description])
-    |> validate_required([:resturant_id, :assigned_number, :max_seats, :min_seats, :description])
+    |> cast(attrs, [:restaurant_id, :assigned_number, :max_seats, :min_seats, :description])
+    |> validate_required([:restaurant_id, :assigned_number, :max_seats, :min_seats, :description])
   end
 end

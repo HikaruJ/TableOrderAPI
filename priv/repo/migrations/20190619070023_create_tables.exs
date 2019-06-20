@@ -3,7 +3,7 @@ defmodule RestuAPI.Repo.Migrations.CreateTables do
 
   def change do
     create table(:tables) do
-      add :resturant_id, references(:resturants)
+      add :restaurant_id, references(:restaurants)
       add :assigned_number, :integer, null: false
       add :max_seats, :integer, default: 1, null: false
       add :min_seats, :integer, default: 1, null: false

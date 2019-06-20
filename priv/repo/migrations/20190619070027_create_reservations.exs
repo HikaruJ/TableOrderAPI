@@ -8,9 +8,8 @@ defmodule RestuAPI.Repo.Migrations.CreateReservations do
       add :email, :string, null: false
       add :phone, :string, null: true
       add :seats, :integer, default: 0, null: false
-      add :reserve_date, :naive_datetime, null: false
-      add :reserve_start_time, :time, null: false
-      add :reserve_end_time, :time, null: false
+      add :order_start_time, :naive_datetime, null: false
+      add :order_end_time, :naive_datetime, null: false
 
       timestamps()
     end

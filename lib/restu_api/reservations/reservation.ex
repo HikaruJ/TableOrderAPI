@@ -3,13 +3,11 @@ defmodule RestuAPI.Reservations.Reservation do
   import Ecto.Changeset
   alias RestuAPI.Tables.Table
 
-
   schema "reservations" do
     field :email, :string
     field :name, :string
-    field :reserve_date, :naive_datetime
-    field :reserve_end_time, :time
-    field :reserve_start_time, :time
+    field :order_end_time, :naive_datetime
+    field :order_start_time, :naive_datetime
     field :phone, :string
     field :seats, :integer
 
@@ -21,8 +19,8 @@ defmodule RestuAPI.Reservations.Reservation do
   @doc false
   def changeset(reservation, attrs) do
     reservation
-    |> cast(attrs, [:table_id, :name, :email, :phone, :seats, :reserve_date, :reserve_start_time, :reserve_end_time])
-    |> validate_required([:table_id, :name, :email, :phone, :seats, :reserve_date, :reserve_start_time, :reserve_end_time])
+    |> cast(attrs, [:table_id, :name, :email, :phone, :seats, :order_start_time, :order_end_time])
+    |> validate_required([:table_id, :name, :email, :phone, :seats, :order_start_time, :order_end_time])
     |> unique_constraint(:name)
     |> unique_constraint(:email)
    end

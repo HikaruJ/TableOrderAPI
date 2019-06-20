@@ -1,32 +1,32 @@
-defmodule RestuAPI.Resturants do
+defmodule RestuAPI.Restaurants do
   @moduledoc """
-  The Resturants context.
+  The Restaurants context.
   """
   import Ecto.Query, warn: false
 
   alias RestuAPI.Repo
-  alias RestuAPI.Resturants.Resturant
+  alias RestuAPI.Restaurants.Restaurant
 
-  def create_resturant(attrs \\ %{}) do
-    %Resturant{}
-    |> Resturant.changeset(attrs)
+  def create_restaurant(attrs \\ %{}) do
+    %Restaurant{}
+    |> Restaurant.changeset(attrs)
     |> Repo.insert()
   end
 
   @doc """
-    Returns the list of resturants.
+    Returns the list of restaurants.
   """
-  def list_resturants do
-    Repo.all(Resturant)
+  def list_restaurants do
+    Repo.all(Restaurant)
   end
 
   @doc """
-    Retrieve resturant from the resturants table using the name of the resturant
+    Retrieve restaurant from the restaurants table using the name of the restaurant
   """
-  def resturant_by_name(name) do
-    query = from resturant in Resturant,
-      where: fragment("lower(?)", resturant.name) == ^name,
-      select: resturant
+  def restaurant_by_name(name) do
+    query = from restaurant in Restaurant,
+      where: fragment("lower(?)", restaurant.name) == ^name,
+      select: restaurant
 
     Repo.one(query)
   end
