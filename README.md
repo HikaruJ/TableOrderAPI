@@ -7,7 +7,8 @@ The database schema is comprised of the following tables
 **Restaurant** - Table that represents which restaurants were registered to the system.
 While the current API is only built for querying restaurant availabilty, the table is
 designed with the thought of exposing an Endpoint in the future, for showing the available restaurants
-for the client on a map with dedicated information per map. <br/> 
+for the client on a map with dedicated information per map.  
+
 Currently the available restaurants in the system are:
 - **1** - すき家 渋谷桜丘店.
 - **2** - 松屋 浅草店.
@@ -26,7 +27,8 @@ Currently there are 3 reservations in the system for "すき家 渋谷桜丘店"
 ## Setup
 - Clone the project into your local environment.
 - Make sure you have Erlang, Elixir, Phoenix and PostgreSQL installed.
-- The project relies on PostgreSQL for creating the DB tables and seeding mock data, for serving data.  <br/>
+- The project relies on PostgreSQL for creating the DB tables and seeding mock data, for serving data.
+
 To start your Phoenix server:
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
