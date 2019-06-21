@@ -1,8 +1,8 @@
-defmodule RestuAPI.Tables.Table do
+defmodule TableOrderAPI.Tables.Table do
   use Ecto.Schema
   import Ecto.Changeset
-  alias RestuAPI.Restaurants.Restaurant
-  alias RestuAPI.Reservations.Reservation
+  alias TableOrderAPI.Restaurants.Restaurant
+  alias TableOrderAPI.Reservations.Reservation
 
   schema "tables" do
     field :assigned_number, :integer

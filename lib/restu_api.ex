@@ -1,6 +1,6 @@
-defmodule RestuAPI do
+defmodule TableOrderAPI do
   @moduledoc """
-  RestuAPI keeps the contexts that define your domain
+  TableOrderAPI keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

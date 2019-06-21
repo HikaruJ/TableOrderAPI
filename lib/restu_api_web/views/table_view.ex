@@ -1,6 +1,6 @@
-defmodule RestuAPI.Web.TableView do
-  use RestuAPI.Web, :view
-  alias RestuAPI.Web.TableView
+defmodule TableOrderAPI.Web.TableView do
+  use TableOrderAPI.Web, :view
+  alias TableOrderAPI.Web.TableView
 
   def render("open_tables.json", %{tables: tables}) do
     %{data: render_many(tables, TableView, "result.json")}

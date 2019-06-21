@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :restu_api, RestuAPI.Web.Endpoint,
+config :table_order_api, TableOrderAPI.Web.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: false,
@@ -38,10 +38,10 @@ config :logger, :console, format: "[$level] $message\n"
 config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
-config :restu_api, RestuAPI.Repo,
+config :table_order_api, TableOrderAPI.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "961406s@",
-  database: "restu_api_dev",
+  database: "table_order_api_dev",
   hostname: "localhost",
   pool_size: 10

@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :restu_api, RestuAPI.Web.Endpoint,
+config :table_order_api, TableOrderAPI.Web.Endpoint,
   http: [port: 4001],
   server: false
 
@@ -10,10 +10,10 @@ config :restu_api, RestuAPI.Web.Endpoint,
 config :logger, level: :warn
 
 # Configure your database
-config :restu_api, RestuAPI.Repo,
+config :table_order_api, TableOrderAPI.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "restu_api_test",
+  database: "table_order_api_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

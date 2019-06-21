@@ -1,4 +1,4 @@
-defmodule RestuAPI.Params.Table.OpenTable do
+defmodule TableOrderAPI.Params.Table.OpenTable do
   use Ecto.Schema
   import Ecto.Changeset
 

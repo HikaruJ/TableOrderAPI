@@ -1,7 +1,7 @@
-defmodule RestuAPI.Restaurants.Restaurant do
+defmodule TableOrderAPI.Restaurants.Restaurant do
   use Ecto.Schema
   import Ecto.Changeset
-  alias RestuAPI.Tables.Table
+  alias TableOrderAPI.Tables.Table
 
   schema "restaurants" do
     field :address, :string

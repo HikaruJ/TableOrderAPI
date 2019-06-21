@@ -1,11 +1,11 @@
-defmodule RestuAPI.Web.ChangesetView do
-  use RestuAPI.Web, :view
+defmodule TableOrderAPI.Web.ChangesetView do
+  use TableOrderAPI.Web, :view
 
   @doc """
   Traverses and translates changeset errors.
 
   See `Ecto.Changeset.traverse_errors/2` and
-  `RestuAPI.Web.ErrorHelpers.translate_error/1` for more details.
+  `TableOrderAPI.Web.ErrorHelpers.translate_error/1` for more details.
   """
   def translate_errors(changeset) do
     Ecto.Changeset.traverse_errors(changeset, &translate_error/1)

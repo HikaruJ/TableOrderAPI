@@ -1,5 +1,5 @@
-defmodule RestuAPI.Repo do
-  use Ecto.Repo, otp_app: :restu_api
+defmodule TableOrderAPI.Repo do
+  use Ecto.Repo, otp_app: :table_order_api
 
   @doc """
   Dynamically loads the repository url from the

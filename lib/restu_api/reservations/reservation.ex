@@ -1,7 +1,7 @@
-defmodule RestuAPI.Reservations.Reservation do
+defmodule TableOrderAPI.Reservations.Reservation do
   use Ecto.Schema
   import Ecto.Changeset
-  alias RestuAPI.Tables.Table
+  alias TableOrderAPI.Tables.Table
 
   schema "reservations" do
     field :email, :string

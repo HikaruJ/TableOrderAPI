@@ -1,4 +1,4 @@
-defmodule RestuAPI.Web.ChannelCase do
+defmodule TableOrderAPI.Web.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule RestuAPI.Web.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint RestuAPI.Web.Endpoint
+      @endpoint TableOrderAPI.Web.Endpoint
     end
   end
 
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(RestuAPI.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(TableOrderAPI.Repo)
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(RestuAPI.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(TableOrderAPI.Repo, {:shared, self()})
     end
     :ok
   end

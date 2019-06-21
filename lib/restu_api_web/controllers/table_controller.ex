@@ -1,10 +1,10 @@
-defmodule RestuAPI.Web.TableController do
+defmodule TableOrderAPI.Web.TableController do
   use Timex
-  use RestuAPI.Web, :controller
-  alias RestuAPI.Params.Table.OpenTable
-  alias RestuAPI.Tables
+  use TableOrderAPI.Web, :controller
+  alias TableOrderAPI.Params.Table.OpenTable
+  alias TableOrderAPI.Tables
   
-  action_fallback RestuAPI.Web.FallbackController
+  action_fallback TableOrderAPI.Web.FallbackController
 
   ### Public Methods ###
   
@@ -13,7 +13,7 @@ defmodule RestuAPI.Web.TableController do
     if !changeset.valid? do
       conn
         |> put_status(:not_found)
-        |> json(%{error: RestuAPI.Web.ChangesetView.translate_errors(changeset)})
+        |> json(%{error: TableOrderAPI.Web.ChangesetView.translate_errors(changeset)})
     else
       [from_date, {restaurant_id, _}, to_date] = parse_open_table_params(params)
       tables = Tables.open_tables(from_date, restaurant_id, to_date)

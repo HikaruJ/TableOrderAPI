@@ -6,20 +6,20 @@
 use Mix.Config
 
 # General application configuration
-config :restu_api,
-  namespace: RestuAPI,
-  ecto_repos: [RestuAPI.Repo]
+config :table_order_api,
+  namespace: TableOrderAPI,
+  ecto_repos: [TableOrderAPI.Repo]
 
 # Poison configuration
 config :phoenix,
- :format_encoders, json: RestuAPI.PrettyPoisonEncoderForPhoenix
+ :format_encoders, json: TableOrderAPI.PrettyPoisonEncoderForPhoenix
 
 # Configures the endpoint
-config :restu_api, RestuAPI.Web.Endpoint,
+config :table_order_api, TableOrderAPI.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "UNp1vJWzyRbkVMlALltLI3qMqdhWmet2xw5ESgNwV24KoKlIsVJSksEAdhSfGEOf",
-  render_errors: [view: RestuAPI.Web.ErrorView, accepts: ~w(json)],
-  pubsub: [name: RestuAPI.PubSub,
+  render_errors: [view: TableOrderAPI.Web.ErrorView, accepts: ~w(json)],
+  pubsub: [name: TableOrderAPI.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

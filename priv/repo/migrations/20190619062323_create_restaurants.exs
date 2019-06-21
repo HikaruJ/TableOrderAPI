@@ -1,4 +1,4 @@
-defmodule RestuAPI.Repo.Migrations.CreateRestaurants do
+defmodule TableOrderAPI.Repo.Migrations.CreateRestaurants do
   use Ecto.Migration
 
   def change do

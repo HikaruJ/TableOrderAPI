@@ -1,14 +1,14 @@
-defmodule RestuAPI.Web.Endpoint do
-  use Phoenix.Endpoint, otp_app: :restu_api
+defmodule TableOrderAPI.Web.Endpoint do
+  use Phoenix.Endpoint, otp_app: :table_order_api
 
-  socket "/socket", RestuAPI.Web.UserSocket
+  socket "/socket", TableOrderAPI.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :restu_api, gzip: false,
+    at: "/", from: :table_order_api, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -32,7 +32,7 @@ defmodule RestuAPI.Web.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
-    key: "_restu_api_key",
+    key: "_table_order_api_key",
     signing_salt: "OqHPK1DZ"
 
   plug Corsica,
@@ -40,7 +40,7 @@ defmodule RestuAPI.Web.Endpoint do
     log: [rejected: :error, invalid: :warn, accepted: :debug]
 
 
-  plug RestuAPI.Web.Router
+  plug TableOrderAPI.Web.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

@@ -5,16 +5,16 @@
 # Inside the script, you can read and write to any of your
 # repositories directly:
 #
-#     RestuAPI.Repo.insert!(%RestuAPI.SomeModel{})
+#     TableOrderAPI.Repo.insert!(%TableOrderAPI.SomeModel{})
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will halt execution if something goes wrong.
 
-alias RestuAPI.Repo
-alias RestuAPI.Reservations.Reservation
-alias RestuAPI.Restaurants.Restaurant
-alias RestuAPI.Tables.Table
-alias RestuAPI.Tables
+alias TableOrderAPI.Repo
+alias TableOrderAPI.Reservations.Reservation
+alias TableOrderAPI.Restaurants.Restaurant
+alias TableOrderAPI.Tables.Table
+alias TableOrderAPI.Tables
 
 # Restaurants #
 Repo.insert!(

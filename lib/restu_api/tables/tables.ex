@@ -1,13 +1,13 @@
-defmodule RestuAPI.Tables do
+defmodule TableOrderAPI.Tables do
   @moduledoc """
   The Tables context.
   """
 
   import Ecto.Query, warn: false
 
-  alias RestuAPI.Repo
-  alias RestuAPI.Reservations.Reservation
-  alias RestuAPI.Tables.Table
+  alias TableOrderAPI.Repo
+  alias TableOrderAPI.Reservations.Reservation
+  alias TableOrderAPI.Tables.Table
 
   @doc """
     Creates a table.
@@ -31,6 +31,6 @@ defmodule RestuAPI.Tables do
         reservation.order_start_time > ^to_date or
         is_nil(reservation.order_start_time)),
       select: table,
-      order_by: [table.id]
+      order_by: [table.assigned_number]
   end
 end
