@@ -37,7 +37,9 @@ To start your Phoenix server:
 
 ## Querying the API
 Once the server is running, the API will be avilable for querying on [`localhost:4000`](http://localhost:4000).
+
 The endpoint for querying the availabily of restaurants is: [`localhost:4000/api/tables/OpenTable`](http://localhost:4000/api/tables/openTable).  
+
 The parameters exposed by the endpoint are:
 - **restaurant_id** (integer) - The restaurant id representing the restaurant. 
 
