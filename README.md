@@ -3,7 +3,8 @@ Table Order API is a programming challange in building an API using Elixir and P
 that exposes the availability of tables in a specified restaurant during certain range of time.
 
 ## DB Schema
-The database schema is comprised of the following tables
+The database schema is comprised of the following tables:
+
 **Restaurant** - Table that represents which restaurants were registered to the system.
 While the current API is only built for querying restaurant availabilty, the table is
 designed with the thought of exposing an Endpoint in the future, for showing the available restaurants
