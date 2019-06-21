@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
-config :restu_api, RestuAPIWeb.Endpoint,
+config :restu_api, RestuAPI.Web.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: false,

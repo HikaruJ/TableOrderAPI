@@ -1,7 +1,7 @@
-defmodule RestuAPIWeb.Endpoint do
+defmodule RestuAPI.Web.Endpoint do
   use Phoenix.Endpoint, otp_app: :restu_api
 
-  socket "/socket", RestuAPIWeb.UserSocket
+  socket "/socket", RestuAPI.Web.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -40,7 +40,7 @@ defmodule RestuAPIWeb.Endpoint do
     log: [rejected: :error, invalid: :warn, accepted: :debug]
 
 
-  plug RestuAPIWeb.Router
+  plug RestuAPI.Web.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.

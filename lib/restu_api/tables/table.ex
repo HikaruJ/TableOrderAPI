@@ -4,7 +4,6 @@ defmodule RestuAPI.Tables.Table do
   alias RestuAPI.Restaurants.Restaurant
   alias RestuAPI.Reservations.Reservation
 
-
   schema "tables" do
     field :assigned_number, :integer
     field :max_seats, :integer

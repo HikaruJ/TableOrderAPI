@@ -1,12 +1,12 @@
-defmodule RestuAPIWeb do
+defmodule RestuAPI.Web do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use RestuAPIWeb, :controller
-      use RestuAPIWeb, :view
+      use RestuAPI.Web, :controller
+      use RestuAPI.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,24 +19,24 @@ defmodule RestuAPIWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: RestuAPIWeb
+      use Phoenix.Controller, namespace: RestuAPI.Web
       import Plug.Conn
-      import RestuAPIWeb.Router.Helpers
-      import RestuAPIWeb.Gettext
+      import RestuAPI.Web.Router.Helpers
+      import RestuAPI.Web.Gettext
     end
   end
 
   def view do
     quote do
       use Phoenix.View, root: "lib/restu_api_web/templates",
-                        namespace: RestuAPIWeb
+                        namespace: RestuAPI.Web
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
 
-      import RestuAPIWeb.Router.Helpers
-      import RestuAPIWeb.ErrorHelpers
-      import RestuAPIWeb.Gettext
+      import RestuAPI.Web.Router.Helpers
+      import RestuAPI.Web.ErrorHelpers
+      import RestuAPI.Web.Gettext
     end
   end
 
@@ -51,7 +51,7 @@ defmodule RestuAPIWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import RestuAPIWeb.Gettext
+      import RestuAPI.Web.Gettext
     end
   end
 

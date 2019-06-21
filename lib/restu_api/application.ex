@@ -11,7 +11,7 @@ defmodule RestuAPI.Application do
       # Start the Ecto repository
       supervisor(RestuAPI.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(RestuAPIWeb.Endpoint, []),
+      supervisor(RestuAPI.Web.Endpoint, []),
       # Start your own worker by calling: RestuAPI.Worker.start_link(arg1, arg2, arg3)
       # worker(RestuAPI.Worker, [arg1, arg2, arg3]),
     ]
@@ -25,7 +25,7 @@ defmodule RestuAPI.Application do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    RestuAPIWeb.Endpoint.config_change(changed, removed)
+    RestuAPI.Web.Endpoint.config_change(changed, removed)
     :ok
   end
 end

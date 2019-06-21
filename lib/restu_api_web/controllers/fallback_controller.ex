@@ -1,15 +1,15 @@
-defmodule RestuAPIWeb.FallbackController do
+defmodule RestuAPI.Web.FallbackController do
   @moduledoc """
   Translates controller action results into valid `Plug.Conn` responses.
 
   See `Phoenix.Controller.action_fallback/1` for more details.
   """
-  use RestuAPIWeb, :controller
+  use RestuAPI.Web, :controller
 
   def call(conn, {:error, %Ecto.Changeset{} = changeset}) do
     conn
     |> put_status(:unprocessable_entity)
-    |> render(RestuAPIWeb.ChangesetView, "error.json", changeset: changeset)
+    |> render(RestuAPI.Web.ChangesetView, "error.json", changeset: changeset)
   end
 
   def call(conn, {:error, :not_found}) do

@@ -12,19 +12,9 @@
 
 alias RestuAPI.Repo
 alias RestuAPI.Reservations.Reservation
-alias RestuAPI.Restaurants
 alias RestuAPI.Restaurants.Restaurant
 alias RestuAPI.Tables.Table
 alias RestuAPI.Tables
-
-# Restaurants Groups #
-# Repo.insert!(
-#   %RestaurantGroup{is_active: true, name: "すき家"}
-# )
-
-# Repo.insert!(
-#   %RestaurantGroup{is_active: true, name: "松屋"}
-# )
 
 # Restaurants #
 Repo.insert!(
@@ -76,13 +66,13 @@ Repo.insert!(%Table{ restaurant_id: 3, assigned_number: 4, max_seats: 2, min_sea
 
 # Reservations #
 Repo.insert!(%Reservation{ table_id: 1, name: "John Wales", email: "john.wales@gml.com",
-                           seats: 3, order_start_time: DateTime.from_iso8601("2019-06-19 17:00:00Z") |> elem(1),
-                           order_end_time: DateTime.from_iso8601("2019-06-19 18:00:00Z") |>elem(1) })
+                           seats: 3, order_start_time: DateTime.from_iso8601("2019-06-19T17:00:00Z") |> elem(1),
+                           order_end_time: DateTime.from_iso8601("2019-06-19T18:00:00Z") |>elem(1) })
 
 Repo.insert!(%Reservation{ table_id: 3, name: "Sato Kazuma", email: "sato.kazuma@gml.com",
-              seats: 2, order_start_time: DateTime.from_iso8601("2019-06-19 12:00:00Z") |> elem(1),
-              order_end_time: DateTime.from_iso8601("2019-06-19 13:30:00Z") |>elem(1) })
+              seats: 2, order_start_time: DateTime.from_iso8601("2019-06-19T12:00:00Z") |> elem(1),
+              order_end_time: DateTime.from_iso8601("2019-06-19T13:30:00Z") |>elem(1) })
 
 Repo.insert!(%Reservation{ table_id: 7, name: "Akari Ayane", email: "akari.ayane@gml.com",
-              seats: 1, order_start_time: DateTime.from_iso8601("2019-06-19 15:00:00Z") |> elem(1),
-              order_end_time: DateTime.from_iso8601("2019-06-19 17:30:00Z") |>elem(1) })
+              seats: 1, order_start_time: DateTime.from_iso8601("2019-06-19T15:00:00Z") |> elem(1),
+              order_end_time: DateTime.from_iso8601("2019-06-19T17:30:00Z") |>elem(1) })

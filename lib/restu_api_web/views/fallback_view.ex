@@ -1,6 +1,6 @@
-defmodule RestuAPIWeb.FallbackView do
-  use RestuAPIWeb, :view
-  alias RestuAPIWeb.FallbackView
+defmodule RestuAPI.Web.FallbackView do
+  use RestuAPI.Web, :view
+  alias RestuAPI.Web.FallbackView
 
   def render("404.json", %{error: error}) do
     %{data: render_one(error, FallbackView, "result.json")}

@@ -10,11 +10,15 @@ config :restu_api,
   namespace: RestuAPI,
   ecto_repos: [RestuAPI.Repo]
 
+# Poison configuration
+config :phoenix,
+ :format_encoders, json: RestuAPI.PrettyPoisonEncoderForPhoenix
+
 # Configures the endpoint
-config :restu_api, RestuAPIWeb.Endpoint,
+config :restu_api, RestuAPI.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "UNp1vJWzyRbkVMlALltLI3qMqdhWmet2xw5ESgNwV24KoKlIsVJSksEAdhSfGEOf",
-  render_errors: [view: RestuAPIWeb.ErrorView, accepts: ~w(json)],
+  render_errors: [view: RestuAPI.Web.ErrorView, accepts: ~w(json)],
   pubsub: [name: RestuAPI.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

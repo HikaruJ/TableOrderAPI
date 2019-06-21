@@ -6,14 +6,14 @@ defmodule RestuAPI.Reservations.Reservation do
   schema "reservations" do
     field :email, :string
     field :name, :string
-    field :order_end_time, :naive_datetime
-    field :order_start_time, :naive_datetime
+    field :order_end_time, :utc_datetime 
+    field :order_start_time, :utc_datetime 
     field :phone, :string
     field :seats, :integer
 
     belongs_to :tables, Table, foreign_key: :table_id
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   @doc false

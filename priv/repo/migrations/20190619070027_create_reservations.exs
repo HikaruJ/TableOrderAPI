@@ -8,10 +8,10 @@ defmodule RestuAPI.Repo.Migrations.CreateReservations do
       add :email, :string, null: false
       add :phone, :string, null: true
       add :seats, :integer, default: 0, null: false
-      add :order_start_time, :naive_datetime, null: false
-      add :order_end_time, :naive_datetime, null: false
+      add :order_start_time, :utc_datetime , null: false
+      add :order_end_time, :utc_datetime , null: false
 
-      timestamps()
+      timestamps(type: :utc_datetime)
     end
 
     create unique_index(:reservations, [:name])

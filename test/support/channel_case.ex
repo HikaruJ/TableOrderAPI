@@ -1,4 +1,4 @@
-defmodule RestuAPIWeb.ChannelCase do
+defmodule RestuAPI.Web.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,7 +21,7 @@ defmodule RestuAPIWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint RestuAPIWeb.Endpoint
+      @endpoint RestuAPI.Web.Endpoint
     end
   end
 

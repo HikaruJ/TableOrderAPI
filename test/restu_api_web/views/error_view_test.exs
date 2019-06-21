@@ -1,16 +1,16 @@
-defmodule RestuAPIWeb.ErrorViewTest do
-  use RestuAPIWeb.ConnCase, async: true
+defmodule RestuAPI.Web.ErrorViewTest do
+  use RestuAPI.Web.ConnCase, async: true
 
   # Bring render/3 and render_to_string/3 for testing custom views
   import Phoenix.View
 
   test "renders 404.json" do
-    assert render(RestuAPIWeb.ErrorView, "404.json", []) ==
+    assert render(RestuAPI.Web.ErrorView, "404.json", []) ==
            %{errors: %{detail: "Not Found"}}
   end
 
   test "renders 500.json" do
-    assert render(RestuAPIWeb.ErrorView, "500.json", []) ==
+    assert render(RestuAPI.Web.ErrorView, "500.json", []) ==
            %{errors: %{detail: "Internal Server Error"}}
   end
 end

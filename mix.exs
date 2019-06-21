@@ -20,7 +20,7 @@ defmodule RestuAPI.Mixfile do
   def application do
     [
       mod: {RestuAPI.Application, []},
-      extra_applications: [:logger, :runtime_tools, :calendar]
+      extra_applications: [:logger, :runtime_tools, :timex]
     ]
   end
 
@@ -41,7 +41,7 @@ defmodule RestuAPI.Mixfile do
       {:cowboy, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
       {:corsica, "~> 1.0"},
-      {:calendar, "~> 0.17.5"}
+      {:timex, "~> 3.5.0"}
     ]
   end
 

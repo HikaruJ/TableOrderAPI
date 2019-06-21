@@ -2,7 +2,7 @@ use Mix.Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :restu_api, RestuAPIWeb.Endpoint,
+config :restu_api, RestuAPI.Web.Endpoint,
   http: [port: 4001],
   server: false
 

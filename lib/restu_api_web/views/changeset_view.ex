@@ -1,11 +1,11 @@
-defmodule RestuAPIWeb.ChangesetView do
-  use RestuAPIWeb, :view
+defmodule RestuAPI.Web.ChangesetView do
+  use RestuAPI.Web, :view
 
   @doc """
   Traverses and translates changeset errors.
 
   See `Ecto.Changeset.traverse_errors/2` and
-  `RestuAPIWeb.ErrorHelpers.translate_error/1` for more details.
+  `RestuAPI.Web.ErrorHelpers.translate_error/1` for more details.
   """
   def translate_errors(changeset) do
     Ecto.Changeset.traverse_errors(changeset, &translate_error/1)

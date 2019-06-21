@@ -1,4 +1,4 @@
-defmodule RestuAPIWeb.ErrorHelpers do
+defmodule RestuAPI.Web.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -25,9 +25,9 @@ defmodule RestuAPIWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(RestuAPIWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(RestuAPI.Web.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(RestuAPIWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(RestuAPI.Web.Gettext, "errors", msg, opts)
     end
   end
 end

@@ -1,5 +1,5 @@
-defmodule RestuAPIWeb.ErrorView do
-  use RestuAPIWeb, :view
+defmodule RestuAPI.Web.ErrorView do
+  use RestuAPI.Web, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

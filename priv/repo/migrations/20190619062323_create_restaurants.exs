@@ -12,7 +12,7 @@ defmodule RestuAPI.Repo.Migrations.CreateRestaurants do
       add :longitude, :float, default: 0, null: false
       add :is_active, :boolean, null: false
 
-      timestamps()
+      timestamps(type: :utc_datetime)
     end
 
     create unique_index(:restaurants, [:name])
