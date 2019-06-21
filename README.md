@@ -7,8 +7,7 @@ The database schema is comprised of the following tables
 **Restaurant** - Table that represents which restaurants were registered to the system.
 While the current API is only built for querying restaurant availabilty, the table is
 designed with the thought of exposing an Endpoint in the future, for showing the available restaurants
-for the client on a map with dedicated information per map.
-
+for the client on a map with dedicated information per map.  
 Currently the available restaurants in the system are:
 - **1** - すき家 渋谷桜丘店.
 - **2** - 松屋 浅草店.
@@ -18,18 +17,16 @@ Currently the available restaurants in the system are:
 and what is the mininum required for seating people in a speicifc table.
 
 **Reservations** - Table that represents reservations that customers made for a specific table
-in a specific restaurant.
-
+in a specific restaurant.  
 Currently there are 3 reservations in the system for "すき家 渋谷桜丘店".
-- 1. **12:00 - 13:30**.
-- 2. **15:00 - 17:30**.
-- 3. **17:00 - 18:00**.
+- **12:00 - 13:30**.
+- **15:00 - 17:30**.
+- **17:00 - 18:00**.
 
 ## Setup
 - Clone the project into your local environment.
 - Make sure you have Erlang, Elixir, Phoenix and PostgreSQL installed.
-- The project relies on PostgreSQL for creating the DB tables and seeding mock data, for serving data.
-
+- The project relies on PostgreSQL for creating the DB tables and seeding mock data, for serving data.  
 To start your Phoenix server:
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
@@ -37,8 +34,7 @@ To start your Phoenix server:
 
 ## Querying the API
 Once the server is running, the API will be avilable for querying on [`localhost:4000`](http://localhost:4000).
-The endpoint for querying the availabily of restaurants is: [`localhost:4000/api/tables/OpenTable`](http://localhost:4000/api/tables/openTable).
-
+The endpoint for querying the availabily of restaurants is: [`localhost:4000/api/tables/OpenTable`](http://localhost:4000/api/tables/openTable).  
 The parameters exposed by the endpoint are:
 - **restaurant_id** (integer) - The restaurant id representing the restaurant. 
 
