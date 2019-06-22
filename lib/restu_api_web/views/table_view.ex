@@ -10,7 +10,6 @@ defmodule TableOrderAPI.Web.TableView do
     %{
       assignedNumber: table.assigned_number,
       description: table.description,
-      id: table.id,
       maxSeats: table.max_seats,
       minSeats: table.min_seats
     }

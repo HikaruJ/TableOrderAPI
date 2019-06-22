@@ -15,8 +15,7 @@ Currently the available restaurants in the system are:
 - **2** - 松屋 浅草店.
 - **3** - J.S. BURGERS CAFE 渋谷店.
 
-**Tables** - Table that represents which tables are available in each restaurant, how many seats
-and what is the mininum required for seating people in a speicifc table.
+**Tables** - Table that represents which tables are available in each restaurant, assigned table number (can change according to each restaurant), how many seats and what is the mininum required for seating people in a specific table.
 
 **Reservations** - Table that represents reservations that customers made for a specific table
 in a specific restaurant. <br/>
